@@ -1,6 +1,8 @@
 const path = require("path");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const title = "App Context";
 
 module.exports = ({ mode }) => {
@@ -12,8 +14,16 @@ module.exports = ({ mode }) => {
       filename: "bundle.js"
     },
     plugins: [
+      new CleanWebpackPlugin("dist", {}),
+      new MiniCssExtractPlugin({
+        filename: "style.min.css"
+      }),
       new CopyWebpackPlugin([
-        { from: "src", to: "./", ignore: ["panel.js", "template/*"] }
+        {
+          from: "src",
+          to: "./",
+          ignore: ["panel.js", "style.css", "template/*", "sample/*"]
+        }
       ]),
       new HtmlWebpackPlugin({
         title,
@@ -34,7 +44,7 @@ module.exports = ({ mode }) => {
         },
         {
           test: /\.css/,
-          loader: "style-loader!css-loader"
+          use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"]
         }
       ]
     }
