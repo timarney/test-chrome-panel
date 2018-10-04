@@ -1,11 +1,11 @@
 {
   "name": "App Context",
   "description": "Adds panel to the Chrome Developer Tools to show App context.",
-  "version": "1.5",
+  "version": "1.6",
   "manifest_version": 2,
   "devtools_page": "devtools.html",
   "externally_connectable": {
-    "matches": ["http://localhost:*/*", "https://codesandbox.io:*/*"]
+    "matches": ["http://localhost:*/*"]
   },
   "permissions": ["tabs"],
   "icons": {
