@@ -1,7 +1,7 @@
 {
   "name": "App Context",
   "description": "Adds panel to the Chrome Developer Tools to show App context.",
-  "version": "1.3",
+  "version": "1.4",
   "manifest_version": 2,
   "devtools_page": "devtools.html",
   "externally_connectable": {
@@ -13,5 +13,13 @@
     "32": "icons/32-production.png",
     "48": "icons/48-production.png",
     "128": "icons/128-production.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/16-production.png",
+      "32": "icons/32-production.png",
+      "48": "icons/48-production.png",
+      "128": "icons/128-production.png"
+    }
   }
 }
