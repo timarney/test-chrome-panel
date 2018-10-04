@@ -1,7 +1,7 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const title = "App Context!!";
+const title = "App Context";
 
 module.exports = ({ mode }) => {
   return {
@@ -31,6 +31,10 @@ module.exports = ({ mode }) => {
               presets: ["@babel/preset-env"]
             }
           }
+        },
+        {
+          test: /\.css/,
+          loader: "style-loader!css-loader"
         }
       ]
     }

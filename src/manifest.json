@@ -1,7 +1,7 @@
 {
   "name": "App Context",
-  "version": "1.2",
-  "manifest_version": 4,
+  "version": "1.3",
+  "manifest_version": 2,
   "devtools_page": "devtools.html",
   "externally_connectable": {
     "matches": [ "http://localhost:*/*" ]
