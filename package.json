@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "webpack": "webpack",
+    "build": "npm run webpack"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "js-object-pretty-print": "^0.3.0"
+  }
+}

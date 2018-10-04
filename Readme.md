@@ -1,3 +1,5 @@
+Adds a dev tools panel for outputing state data to from an app.
+
 
 Code for app sending the message
 
