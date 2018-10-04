@@ -1,1 +1,1 @@
-chrome.devtools.panels.create('App Context', null, 'panel.html');
+chrome.devtools.panels.create('App Context', null, 'index.html');

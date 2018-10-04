@@ -1,16 +1,24 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const title = "App Context!!";
 
-module.exports = env => {
+module.exports = ({ mode }) => {
   return {
     entry: "./src/panel.js",
-    mode: env.mode,
+    mode: mode,
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "bundle.js"
     },
     plugins: [
-      new CopyWebpackPlugin([{ from: "src", to: "./", ignore: "panel.js" }])
+      new CopyWebpackPlugin([
+        { from: "src", to: "./", ignore: ["panel.js", "template/*"] }
+      ]),
+      new HtmlWebpackPlugin({
+        title,
+        template: "src/template/panel.html"
+      })
     ],
     module: {
       rules: [

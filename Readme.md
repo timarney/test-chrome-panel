@@ -1,5 +1,6 @@
 Adds a dev tools panel for outputing state data to from an app.
 
+## Usage
 
 Code for app sending the message
 
@@ -8,4 +9,10 @@ const panelId = "panel-id-here";
 const port = chrome.runtime.connect(panelId); // eslint-disable-line
 port.postMessage({
 time: new Date().toLocaleTimeString()});
+```
+
+## Build
+
+```
+yarn build
 ```
