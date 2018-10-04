@@ -4,9 +4,13 @@
   "manifest_version": 2,
   "devtools_page": "devtools.html",
   "externally_connectable": {
-    "matches": [ "http://localhost:*/*" ]
+    "matches": ["http://localhost:*/*"]
   },
-  "permissions": [
-      "tabs"
-  ]
+  "permissions": ["tabs"],
+  "icons": {
+    "16": "icons/16-production.png",
+    "32": "icons/32-production.png",
+    "48": "icons/48-production.png",
+    "128": "icons/128-production.png"
+  }
 }
